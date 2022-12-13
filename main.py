@@ -12,6 +12,7 @@ def attack(char_name, char_class):
         return (f'{char_name} нанёс урон противнику равный '
                 f'{5 + randint(-3, -1)}')
     return (f'{char_name} не нанёс урон противнику')
+    # return a value other than 'None' to avoid error R503
 
 
 def defence(char_name, char_class):
@@ -22,6 +23,7 @@ def defence(char_name, char_class):
     if char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
     return (f'{char_name} не блокировал урон')
+    # return a value other than 'None' to avoid error R503
 
 
 def special(char_name, char_class):
@@ -35,7 +37,8 @@ def special(char_name, char_class):
         return (f'{char_name} применил специальное '
                 f'умение "Защита {10 + 20}')
     return (f'{char_name} не применил специальное умение')
-
+    # return a value other than 'None' to avoid error R503
+   
 
 def start_training(char_name, char_class):
     if char_class == 'warrior':
